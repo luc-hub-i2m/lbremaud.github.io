@@ -1,0 +1,424 @@
+/*####################################################################################################*/
+/*GENERAL*/
+/*####################################################################################################*/
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh; /* Set the minimum height to full viewport height */
+    display: flex;
+    flex-direction: column; /* Arrange content vertically */
+    background: #2C333C;
+    color: whitesmoke;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    /*overflow-x: hidden;*/
+}
+
+main {
+    flex: 1; /* Take up any remaining space between header and footer */
+}
+
+/*####################################################################################################*/
+/*HEADER*/
+/*####################################################################################################*/
+/* General Header Nav */
+.sticky-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Ensures it stays above other elements */
+}
+
+.header-nav {
+    background: #2C333C;
+    padding: 3vh 3vw;
+}
+
+.header-nav ul {
+    list-style: none;
+    display: flex; /* Arrange items in a row */
+    align-items: center; /* Center items vertically */
+    padding: 0;
+    margin: 0;
+}
+
+.header-nav li {
+    margin: 0 15px;
+}
+
+.header-nav a {
+    color: whitesmoke;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.header-nav a:hover {
+    color: #FF6F61;
+}
+
+/* Logo */
+.logo-circle {
+    margin-right: 20px; /* Add some space between the logo and the other items */
+}
+
+.home-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: whitesmoke;
+    font-weight: bold;
+}
+
+.home-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #FF6F61;
+    color: whitesmoke;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-right: 8px;
+}
+
+.home-link:hover .home-logo {
+    color: #FF6F61; /* Change text color on hover */
+    background-color: #3F4C5C; /* Optional: change background color */
+}
+
+.home-name {
+    font-size: 1.1em;
+}
+
+/*####################################################################################################*/
+/* Containers */
+/*####################################################################################################*/
+.section-bg-anthracite {
+    text-align: center; /* Center the text in the section */
+    padding: 50px; /* Add some padding for content */
+    color: whitesmoke;
+    text-align: left;
+}
+
+.video-container {
+    width: 100%; /* Full width */
+    max-width: 800px; /* Adjust to desired width */
+    margin: 0 auto; /* Center the video */
+    padding: 10vh 0vw;
+}
+
+/*####################################################################################################*/
+/*Video*/
+/*####################################################################################################*/
+video {
+    width: 100%;
+    height: auto;
+    border-radius: 10px; /* Optional: rounded corners */
+}
+
+/*####################################################################################################*/
+/*Text*/
+/*####################################################################################################*/
+.main-title {
+    font-size: 90px; /* Larger font for the main heading */
+    font-weight: bold;
+    margin-bottom: 15px; /* Add space below the main title */
+    margin-left: 15vw;
+}
+
+.sub-title {
+    font-size: 22px; /* Smaller font for the subheading */
+    line-height: 1.5; /* Improve line spacing for readability */
+    font-weight: 300;
+    max-width: 38vw;
+    margin-left: 15vw;
+}
+
+.section-title {
+    font-size: 60px; /* Smaller font for the subheading */
+    font-weight: bold;
+}
+
+/*####################################################################################################*/
+/*Arrow*/
+/*####################################################################################################*/
+/*To-top Arrow*/
+.to-top{
+	color:whitesmoke;
+	padding-top:1.8em;
+	display:inline-block;/* or block */
+	position:relative;
+	border-color:whitesmoke;
+	text-decoration:none;
+	transition:all .3s ease-out;
+}
+.to-top:before{
+	content:'▲';
+	font-size:.9em;
+	position:absolute;
+	top:0;
+	left:50%;
+	margin-left:-.7em;
+	border:solid .13em whitesmoke;
+	border-radius:10em;
+	width:1.4em;
+	height:1.4em;
+	line-height:1.3em;
+	border-color:inherit;
+	transition:transform .5s ease-in;
+}
+.to-top:hover{
+	color:#FF6F61;
+	border-color:#FF6F61;
+}
+.to-top:hover:before{
+	transform: rotate(360deg);
+}
+
+/*Scroll down Arrow*/
+.arrow {
+    opacity: 0;
+    position: absolute;
+        left: 50%;
+        top: 50%;
+    transform-origin: 50% 50%;
+    transform: translate3d(-50%, -50%, 0);
+}
+
+.arrow-first {
+    animation: arrow-movement 2s ease-in-out infinite;
+}
+.arrow-second {
+    animation: arrow-movement 2s 1s ease-in-out infinite;
+}
+
+.arrow:before,
+.arrow:after {
+    background: #fff;
+    content: '';
+    display: block;
+    height: 3px; 
+    position: absolute;
+        top: 0;
+        left: 0;
+    width: 30px;
+}
+
+.arrow:before {
+    transform: rotate(45deg) translateX(-23%);
+    transform-origin: top left;
+}
+
+.arrow:after {
+    transform: rotate(-45deg) translateX(23%);
+    transform-origin: top right;
+}
+
+@keyframes arrow-movement {
+    0% { 
+        opacity: 0;
+        top: 45%;
+    }
+    70% {
+        opacity: 1;
+    }
+    100% { 
+        opacity: 0;
+    }
+}
+
+/*####################################################################################################*/
+/*Timeline*/
+/*####################################################################################################*/
+/* Timeline Container */
+.timeline {
+    position: relative;
+    width: 0.2vw; /* Adjust thickness */
+    background-color: whitesmoke;
+    margin: 0 auto;
+}
+
+/* Dots along the line */
+.dot {
+    width: 70px;
+    height: 70px;
+    background-color: whitesmoke;
+    border-radius: 50%;
+    position: relative;
+    transform: translateX(-50%);
+    text-align: center;
+    border: 3px solid #FF6F61; /* Contour line (border) */
+    transition: transform 0.3s ease; /* Smooth scaling transition */
+}
+
+/* Hover effect to scale both the dot and logo */
+.dot:hover {
+    transform: translateX(-50%) scale(1.2); /* Increase size by 20% on hover */
+    z-index: 999;
+}
+
+/* Logos inside dots */
+.dot-logo {
+    width: 80%;
+    height: auto;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: transform 0.3s ease; /* Smooth scaling transition for the logo */
+}
+
+/* Text on the left of each dot */
+.text-left {
+    position: absolute;
+    left: -270px; /* Adjust based on desired distance */
+    top: 50%;
+    transform: translateY(-50%);
+    width: 300px;
+    text-align: center;
+}
+
+/* Text on the right of each dot */
+.text-right {
+    position: absolute;
+    right: -270px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 300px;
+    text-align: center;
+}
+
+/* Text location & date */
+.text-locdate {
+    color: pink; /* Example styling */
+}
+
+/* Position the dots along the vertical line */
+.dot:nth-child(1) { top: 30px; }
+.dot:nth-child(2) { top: 250px; }
+.dot:nth-child(3) { top: 470px; }
+.dot:nth-child(4) { top: 690px; }
+.dot:nth-child(5) { top: 910px; }
+.dot:nth-child(6) { top: 1130px; }
+.dot:nth-child(7) { top: 1350px; }
+
+/*####################################################################################################*/
+/*Pop-up*/
+/*####################################################################################################*/
+/* Square pop-up box */
+.popup-box {
+    display: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #4A5C6D;
+    color: whitesmoke;
+    padding: 10px;
+    width: auto;
+    height: auto;
+    text-align: center;
+    border-radius: 7px;
+    border: 3px solid #FF6F61;
+    /* z-index: 9999; */
+}
+
+.popup-box ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin: 10px 0;
+    text-align: left;
+}
+
+.popup-box li {
+    font-size: 0.9em;
+    color: whitesmoke;
+    line-height: 1.5;
+}
+
+/* Show the square pop-up on hover of .dot */
+.dot:hover .popup-box {
+    display: block;
+}
+
+/*####################################################################################################*/
+/*Star dots*/
+/*####################################################################################################*/
+/* Container Centering */
+.pentagon-container {
+    position: relative;
+    width: 500px;  /* Adjust for overall pentagon size */
+    height: 500px;
+    margin: 0 auto;  /* Center the container */
+}
+
+/* Shared Dot Styling */
+.pent-dot {
+    width: 90px;
+    height: 90px;
+    background-color: #4A5C6D;
+    border-radius: 50%;
+    border: 3px solid #FF6F61;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: whitesmoke;
+    text-align: center;
+    font-size: 0.9em;
+    position: absolute;
+    transition: transform 0.3s ease;
+    box-sizing: border-box;
+    transform-origin: center; /* Ensure scaling occurs from the center */
+}
+
+/* Hover Effect */
+.pent-dot:hover {
+    transform: scale(1.2);
+    font-weight: bold;
+}
+
+.popupent-box {
+    display: none;
+    position: absolute;
+    top: 250%;
+    transform: translateY(-50%);
+    color: whitesmoke;
+    padding: 10px;
+    width: auto;
+    height: auto;
+    text-align: center;
+}
+
+/* Show the popup on hover */
+.pent-dot:hover .popupent-box {
+    display: block; /* Show the pop-up */
+}
+
+/* Pentagon Positioning */
+.dot1 {
+    top: 0%;
+    left: 50%;
+}
+
+.dot2 {
+    top: 30%;
+    left: 92%;
+}
+
+.dot3 {
+    bottom: 5%;
+    left: 77%;
+}
+
+.dot4 {
+    bottom: 5%;
+    left: 23%;
+}
+
+.dot5 {
+    top: 30%;
+    left: 8%;
+}

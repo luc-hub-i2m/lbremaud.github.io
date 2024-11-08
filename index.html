@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOMUc6iDfM3IUPPdgjF7FBck4F5xqAwj7b1yMMe8" crossorigin="anonymous">
+
+    <style>
+        /*################################################*/
+        /* Logo */
+        /*################################################*/
+    </style>
+</head>
+
+<body>
+    <!-- Header Section -->
+    <div id="header-placeholder" class="sticky-header"></div>
+    <script>
+        fetch("header.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("header-placeholder").innerHTML = data;
+            });
+    </script>
+
+    <!-- Main Content -->
+    <main>
+        <!-- About -->
+        <section class="section-bg-anthracite">
+            <h1 class="main-title">Hello There!</h1>
+            <h2 class="sub-title">I'm Luc, a research engineer working on the numerical modeling of material behavior under dynamic loading conditions</h2>
+            <h2 class="sub-title" style="font-weight: bold;">Check it out!</h2>
+            <!-- Animated Arrow -->
+            <div class="arrow arrow-first" style="margin-top:80px"></div>
+            <div class="arrow arrow-second" style="margin-top:80px"></div>
+        </section>
+
+        <!-- Video -->
+        <section class="section-bg-anthracite" style="margin-bottom:-5%">
+            <div class="video-container">
+                <video autoplay loop>
+                    <source src="images/GEPI.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </section>
+
+        <!-- Work experience -->
+        <h1 id="work-experience" style="visibility: hidden; position: relative; top: -150px;"></h1>
+        <h1 class="section-title" style="margin-left: 10vw; text-align: left;">Work experience</h1>
+        <section class="timeline" style="right: 20vw; height: 1920px;">
+                <!-- AMVALOR -->
+                <div class="dot">
+                    <img src="images/logo_AM.png" alt="Logo" class="dot-logo" style="margin-top: 20%;">
+                    <div class="popup-box" style="left: 100%; width: 20vw; left: 450%;">
+                        <h1>Research Engineer</h1>
+                        <ul>
+                            <li>Composite/brittle material behaviour under dynamic dynamic loading conditions</li>
+                            <li>Damage and fragmentation processes</li>
+                            <li>FEM and DEM-based simulations</li>
+                            <li>Management and intern mentoring</li>
+                        </ul>
+                    </div>
+                    <div class="text-left text-locdate">
+                        <strong>AMVALOR</strong><br>Bordeaux<br>Jun 2024 - present
+                    </div>
+                    <div class="text-right">
+                        <strong>Research Engineer</strong>
+                    </div>
+                </div>
+                <!-- ROXEL -->
+                <div class="dot">
+                    <img src="images/logo_roxel.png" alt="Logo" class="dot-logo" style="margin-top: 5%;">
+                    <div class="popup-box" style="left: 100%; width: 20vw; left: 450%;">
+                        <h1>R&D Engineer</h1>
+                        <ul>
+                            <li>Defense applications</li>
+                            <li>Thermomechanical numerical modelling</li>
+                            <li>Solid propulsion dimensioning</li>
+                        </ul>
+                    </div>
+                    <div class="text-left">
+                        <strong>R&D Engineer</strong>
+                    </div>
+                    <div class="text-right text-locdate">
+                        <strong>Roxel</strong><br>Bordeaux<br>Oct 2023 - Jun 2024
+                    </div>
+                </div>
+                <!-- VACATIONS -->
+                <div class="dot">
+                    <img src="images/logo_AM.png" alt="Logo 2" class="dot-logo" style="margin-top: 20%;">
+                    <div class="popup-box" style="left: 100%; width: 20vw; left: 450%;">
+                        <h1>Adjunct Professor</h1>
+                        <ul>
+                            <li>Numerical practical work (Abaqus)</li>
+                            <li>Material resistance, beam theory, linear elasticity</li>
+                        </ul>
+                    </div>
+                    <div class="text-left text-locdate">
+                        <strong>ENSAM</strong><br>Bordeaux<br>Apr 2021 - May 2022
+                    </div>
+                    <div class="text-right">
+                        <strong>Adjunct Professor</strong>
+                    </div>
+                </div>
+                <!-- PHD -->
+                <div class="dot">
+                    <img src="images/logo_CEA.png" alt="Logo 2" class="dot-logo" style="margin-top: 10%;">
+                    <div class="popup-box" style="left: 100%; width: 31vw; left: 450%;">
+                        <h1>PhD - Contribution to the modelling of damage in ceramics under dynamic loading</h1>
+                        <ul>
+                            <li>Numerical modelling of the dynamic fragmentation in ceramics - Application on the Laser MégaJoule</li>
+                            <li>Collaborative work with the  I2M Lab, the Military Applications Division of the French Atomic Energy and Alternative Energies Commission and the 3SR Lab</li>
+                            <li>Integration of strain rate-dependant anisotropic damage models in the Discrete Element Method</li>
+                            <li>Numerical modelling of various dynamic experiments : Shockless impact, Edge-on-impact, Rockspall, Laser shock</li>
+                        </ul>
+                    </div>
+                    <div class="text-left">
+                        <strong>PhD Student</strong>
+                    </div>
+                    <div class="text-right text-locdate">
+                        <strong>CEA</strong><br>Bordeaux<br>Oct 2020 - Oct 2023
+                    </div>
+                </div>
+                <!-- I2M INTERNSHIP -->
+                <div class="dot">
+                    <img src="images/logo_I2M.png" alt="Logo 2" class="dot-logo" style="margin-top: 25%;">
+                    <div class="popup-box" style="left: 100%; width: 25vw; left: 450%;">
+                        <h1>Final-Year Internship</h1>
+                        <ul>
+                            <li>Numerical modelling of pharmaceutical tablets failure</li>
+                            <li>Experiments/simulation dialogue of Disk-shaped Compact Tension Tests</li>
+                            <li>Implementation of Cohesive Zone Models into the Finite Element Method</li>
+                        </ul>
+                    </div>
+                    <div class="text-left text-locdate">
+                        <strong>I2M</strong><br>Bordeaux<br>Mar 2020 - Aug 2020
+                    </div>
+                    <div class="text-right">
+                        <strong>University Internship</strong>
+                    </div>
+                </div>
+                <!-- ACADOMIA -->
+                <div class="dot">
+                    <img src="images/logo_acadomia.png" alt="Logo 2" class="dot-logo" style="margin-top: 15%; height: 70%; width: 70%;">
+                    <div class="popup-box" style="left: 100%; width: 20vw; left: 450%;">
+                        <h1>Teacher</h1>
+                        <ul>
+                            <li>Preparatory classes for mathematics and physics-chemistry exams</li>
+                            <li>High responsabilty level (5 classes)</li>
+                        </ul>
+                    </div>
+                    <div class="text-left">
+                        <strong>Teacher</strong>
+                    </div>
+                    <div class="text-right text-locdate">
+                        <strong>Acadomia</strong><br>Paris<br>Jan 2019 - Dec 2019
+                    </div>
+                </div>
+                <!-- UPMC INTERNSHIP -->
+                <div class="dot">
+                    <img src="images/logo_alembert.png" alt="Logo 2" class="dot-logo" style="margin-top: 10%;">
+                    <div class="popup-box" style="left: 100%; width: 20vw; left: 450%;">
+                        <h1>University Internship</h1>
+                        <ul>
+                            <li>Study of mineralization heterogeneities in the microstructures of bones</li>
+                            <li>FFT-based homogenization</li>
+                        </ul>
+                    </div>
+                    <div class="text-left text-locdate">
+                        <strong>&#8706;'Alembert</strong><br>Paris<br>Apr 2019 - Jul 2019
+                    </div>
+                    <div class="text-right">
+                        <strong>University Internship</strong>
+                    </div>
+                </div>
+        </section>
+
+        <div class="video-container" style="position:absolute; margin-top:-180vh; left: 60vw; height: 100%; width: auto;">
+            <video autoplay loop>
+                <source src="images/EOI/EOI.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        
+        <!-- Education -->
+        <h1 id="education" style="visibility: hidden; position: relative; top: -100vh;"></h1>
+        <h1 class="section-title" style="margin-right: 10vw; text-align: right; margin-top:-80vh;">Education</h1>
+        <section class="timeline" style="left: 20vw; height: 730px; margin-bottom: -5%;">
+            <!-- ENPC -->
+            <div class="dot">
+                <img src="images/logo_ENPC.png" alt="Logo 2" class="dot-logo" style="margin-top: 5%;">
+                <div class="popup-box" style="right: 100%; width: 20vw; right: 450%;">
+                    <h1>Master Program</h1>
+                    <ul>
+                        <li>Sorbonne Master’s degree in partnership with the ENPC</li>
+                        <li>Homogenization, Fatigue</li>
+                    </ul>
+                </div>
+                <div class="text-left">
+                    <strong>Master Student</strong>
+                </div>
+                <div class="text-right text-locdate">
+                    <strong>&#201;cole Nationale des Ponts et Chaussées</strong><br>Paris<br>Sep 2019 - Aug 2020
+                </div>
+            </div>
+            <!-- UPMC -->
+            <div class="dot">
+                <img src="images/logo_SU.png" alt="Logo 1" class="dot-logo" style="margin-top: 15%; height: 70%; width: auto;">
+                <div class="popup-box" style="right: 100%; width: 25vw; right: 450%;">
+                    <h1>Master Program</h1>
+                    <ul>
+                        <li>Master’s degree with honors (14.56/20, 4th in class)</li>
+                        <li>Engineering Sciences specialization: Solid and Structural Mechanics, Modeling and Simulation theme</li>
+                        <li><strong>Courses</strong>
+                            <ul>
+                                <li>Damage of materials and structures</li>
+                                <li>Fracture mechanics and non-linear behavior of solids</li>
+                                <li>Heterogeneous materials</li>
+                                <li>Non-linear structural analysis project</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="text-left text-locdate">
+                    <strong>Sorbonne Science University</strong><br>Paris<br>Sep 2018 - Jul 2019
+                </div>
+                <div class="text-right">
+                    <strong>Master Student</strong>
+                </div>
+            </div>
+            <!-- KTH -->
+            <div class="dot">
+                <img src="images/logo_KTH.png" alt="Logo 2" class="dot-logo" style="margin-top: 0%;">
+                <div class="popup-box" style="right: 100%; width: 20vw; right: 450%;">
+                    <h1>Exchange Student</h1>
+                    <ul>
+                        <li>Aircraft Aerodynamics, Fluid Mechanics</li>
+                        <li>Language and literature class</li>
+                    </ul>
+                </div>
+                <div class="text-left">
+                    <strong>Exchange Student</strong>
+                </div>
+                <div class="text-right text-locdate">
+                    <strong>KTH University</strong><br>Stockholm<br>Jan 2018 - Jun 2018
+                </div>
+            </div>
+        </section>
+
+        <!-- Programming -->
+        <h1 id="programming" style="visibility: hidden; position: relative; margin-top: 15%;"></h1>
+        <h1 class="section-title" style="margin-left: 10vw; text-align: left;">Programming</h1>
+        <div class="pentagon-container">
+            <div class="pent-dot dot1">
+                <p>Coding</p>
+                <div class="popupent-box">
+                    Python<br>C++
+                </div>
+            </div>
+            <div class="pent-dot dot2">
+                <p>Editing</p>
+            </div>
+            <div class="pent-dot dot3">
+                <p>Modelling</p>
+            </div>
+            <div class="pent-dot dot4">
+                <p>CAD</p>
+            </div>
+            <div class="pent-dot dot5">
+                <p>Visualizing</p>
+            </div>
+        </div>
+        
+    </main>
+
+    <a href="#" class="to-top" style="margin-bottom:3vh">Back to top</a>
+</body>
+</html>
