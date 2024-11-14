@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Luc Bremaud's personal website, showcasing projects and experience in numerical modelling and other researches.">
+    <meta name="keywords" content="Luc Bremaud, web development, coding, research, projects, numerical modeling, modelling, GEPI, brittle, materials, simulations, GranOO">
+    <meta name="author" content="Luc Bremaud">
+    <meta name="google-site-verification" content="MfvBiMqCURCGfvPsj385X_CfCNFmyGmt57wHaAKJFco" />
+
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOMUc6iDfM3IUPPdgjF7FBck4F5xqAwj7b1yMMe8" crossorigin="anonymous">
+</head>
+
+<body>
+    <!-- Header -->
+    <div id="header" style="position: fixed; top: 0; width: 100%; z-index: 1000;"></div>
+    <script>
+        fetch("header.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("header").innerHTML = data;
+            });
+    </script>
+
+    <!-- Main Content -->
+    <main>
+        <!-- About -->
+        <section class="about">
+            <h1 class="main-title">Hello There!</h1>
+            <h2 class="sub-title">I'm Luc, a research scientist working on the numerical modeling of material behavior under dynamic loading conditions</h2>
+            <h2 class="sub-title" style="font-weight: bold; padding: 5vh 0">Check it out!</h2>
+        </section>
+
+        <!-- Video -->
+        <div class="video-gepi">
+            <video autoplay loop muted>
+                <!-- <source src="https://github.com/luc-hub-i2m/lbremaud.github.io/raw/main/images/GEPI.mp4" type="video/mp4"> -->
+                <source src="images/GEPI.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <!-- Work experience -->
+        <div id="work"></div>
+        <script>
+            fetch("work.html")
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("work").innerHTML = data;
+                });
+        </script>
+
+        <div class="video-eoi">
+            <video autoplay loop muted>
+                <!-- <source src="https://github.com/luc-hub-i2m/lbremaud.github.io/raw/main/images/EOI.mp4" type="video/mp4"> -->
+                <source src="images/EOI.mp4" type="video/mp4">
+            </video>
+        </div>
+        
+        <!-- Education -->
+        <div id="school"></div>
+        <script>
+            fetch("education.html")
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("school").innerHTML = data;
+                });
+        </script>
+        
+        <!-- Programming -->
+        <div id="skills"></div>
+        <script>
+            fetch("programming.html")
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("skills").innerHTML = data;
+                });
+        </script>
+
+        <!-- Projects -->
+        <div id="ideas"></div>
+        <script>
+            fetch("projects.html")
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("ideas").innerHTML = data;
+                });
+        </script>
+
+        <!-- Social Media -->
+        <div id="social"></div>
+        <script>
+            fetch("contact.html")
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("social").innerHTML = data;
+                });
+        </script>
+
+        <div class="video-impact">
+            <video autoplay loop muted>
+                <!-- <source src="https://github.com/luc-hub-i2m/lbremaud.github.io/raw/main/images/impact.mp4" type="video/mp4"> -->
+                <source src="images/impact.mp4" type="video/mp4">
+            </video>
+        </div>
+    </main>
+
+    <a href="#" class="to-top" style="margin-bottom:3vh; margin-top:0%;">Back to top</a>
+</body>
+</html>

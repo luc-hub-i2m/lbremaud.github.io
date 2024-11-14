@@ -1,0 +1,677 @@
+/*####################################################################################################*/
+/* GENERAL */
+/*####################################################################################################*/
+html {
+    scroll-behavior: smooth;
+    font-size: 1vw;
+}
+
+body {
+    min-height: 100vh; /* Set the minimum height to full viewport height */
+    display: flex;
+    flex-direction: column; /* Arrange content vertically */
+    background: #2C333C;
+    color: whitesmoke;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    font-size: 1rem;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Optional: Prevent scrolling */
+    width: 100vw;
+    height: auto;
+}  
+
+main {
+    flex: 1; /* Take up any remaining space between header and footer */
+}
+
+/*####################################################################################################*/
+/* HEADER */
+/*####################################################################################################*/
+.header-nav ul {
+    list-style: none;
+    display: flex; /* Arrange items in a row */
+    align-items: center; /* Center items vertically */
+}
+
+.header-nav li {
+    margin: 0 1vw;
+}
+
+.header-nav a {
+    color: whitesmoke;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.header-nav a:hover {
+    color: #FF6F61;
+}
+
+.home-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: whitesmoke;
+    font-weight: bold;
+}
+
+.home-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    background-color: #FF6F61;
+    color: whitesmoke;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-right: 1vw;
+}
+
+.home-link:hover .home-logo {
+    color: #FF6F61; /* Change text color on hover */
+    background-color: #3F4C5C; /* Optional: change background color */
+}
+
+.home-name {
+    font-size: 1.1rem;
+}
+
+/*####################################################################################################*/
+/* ABOUT */
+/*####################################################################################################*/
+.about {
+    padding-top: 2vh; /* Add some padding for content */
+    color: whitesmoke;
+    text-align: left;
+}
+
+.main-title {
+    font-size: 5rem; /* Larger font for the main heading */
+    font-weight: bold;
+    margin-bottom: 1vh; /* Add space below the main title */
+    margin-left: 13vw;
+}
+
+.sub-title {
+    font-size: 1.3rem; /* Smaller font for the subheading */
+    line-height: 150%; /* Improve line spacing for readability */
+    font-weight: normal;
+    max-width: 50vw;
+    margin-left: 13vw;
+}
+
+/*####################################################################################################*/
+/* VIDEOS */
+/*####################################################################################################*/
+.video-gepi {
+    width: 50%; /* Adjust to desired size */
+    margin: -10vh auto; /* Center the container */
+    padding-bottom: 10vh;
+}
+
+.video-gepi video {
+    width: 100%; /* Make the video fill the parent container */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.video-eoi {
+    height: 80%; /* Adjust to desired size */
+    position:absolute;
+    top:70vw;
+    left: 60vw;
+}
+
+.video-eoi video {
+    width: 30vw; /* Make the video fill the parent container */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.video-impact {
+    height: 100%; /* Adjust to desired size */
+    position: relative;
+    left: 10vw;
+}
+
+.video-impact video {
+    width: 50vw; /* Make the video fill the parent container */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/*####################################################################################################*/
+/* SECTION TITLES */
+/*####################################################################################################*/
+.hidden-title {
+    visibility: hidden;
+    position: relative;
+}
+
+.section-title-left {
+    font-size: 3rem; /* Smaller font for the subheading */
+    font-weight: bold;
+    text-align: left;
+    margin-left: 10vw;
+}
+
+.section-title-right {
+    font-size: 3rem; /* Smaller font for the subheading */
+    font-weight: bold;
+    text-align: right;
+    margin-right: 10vw;
+}
+
+/*####################################################################################################*/
+/* WORK EXPERIENCE */
+/*####################################################################################################*/
+.section{
+    margin-top: -47.75vw;
+}
+
+.timeline-work {
+    position: relative;
+    width: 0.2vw; /* Adjust thickness */
+    background-color: whitesmoke;
+    margin: 0 auto;
+    right: 20vw;
+    height: 118vw;
+}
+
+.dot-work {
+    width: 4.5vw;
+    height: 4.5vw;
+    background-color: whitesmoke;
+    border-radius: 50%;
+    position: relative;
+    transform: translateX(-50%);
+    text-align: center;
+    border: 0.2vw solid #FF6F61; /* Contour line (border) */
+    transition: transform 0.3s ease; /* Smooth scaling transition */
+}
+
+.dot-work:hover {
+    transform: translateX(-50%) scale(1.2); /* Increase size by 20% on hover */
+    z-index: 999;
+}
+
+.dot-work:nth-child(1) { top: 2vw; }
+.dot-work:nth-child(2) { top: 15vw; }
+.dot-work:nth-child(3) { top: 28vw; }
+.dot-work:nth-child(4) { top: 41vw; }
+.dot-work:nth-child(5) { top: 54vw; }
+.dot-work:nth-child(6) { top: 67vw; }
+.dot-work:nth-child(7) { top: 80vw; }
+
+.dot-logo-work {
+    width: 80%;
+    height: auto;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: transform 0.3s ease; /* Smooth scaling transition for the logo */
+}
+
+/* Text on the left of each dot */
+.text-left-work {
+    position: absolute;
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Center vertically based on the element's height */
+    right: calc(100% + 2vw); /* Shift to the left of the dot with padding */
+    width: max-content; /* Ensure the width adapts to text size */
+    text-align: center; /* Align text to the right */
+    max-width: 20vw;
+}
+
+
+/* Text on the right of each dot */
+.text-right-work {
+    position: absolute;
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Center vertically based on the element's height */
+    left: calc(100% + 2vw); /* Shift to the left of the dot with padding */
+    width: max-content; /* Ensure the width adapts to text size */
+    text-align: center; /* Align text to the right */
+    max-width: 20vw;
+}
+
+/* Text location & date */
+.text-color {
+    color: pink; /* Example styling */
+}
+
+.popup-work {
+    display: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #4A5C6D;
+    color: whitesmoke;
+    padding: 1vw;
+    width: auto;
+    height: auto;
+    text-align: center;
+    border-radius: 7px;
+    border: 3px solid #FF6F61;
+    width: 20vw;
+    max-width: 25vw;
+    left: 450%;
+    width: max-content;
+}
+
+.popup-work ul {
+    list-style-type: disc;
+    padding-left: 1vw;
+    margin: 1vh 0;
+    text-align: left;
+}
+
+.popup-work h1 {
+    font-size: 1em;
+    color: whitesmoke;
+}
+
+.popup-work li {
+    font-size: 0.8em;
+    color: whitesmoke;
+    line-height: 1.5;
+}
+
+/* Show the square pop-up on hover of .dot */
+.dot-work:hover .popup-work {
+    display: block;
+}
+
+/*####################################################################################################*/
+/* EDUCATION */
+/*####################################################################################################*/
+.timeline-education {
+    position: relative;
+    width: 0.2vw; /* Adjust thickness */
+    background-color: whitesmoke;
+    margin: 0 auto;
+    left: 20vw;
+    height: 47vw;
+}
+
+.dot-education {
+    width: 4.5vw;
+    height: 4.5vw;
+    background-color: whitesmoke;
+    border-radius: 50%;
+    position: relative;
+    transform: translateX(-50%);
+    text-align: center;
+    border: 0.2vw solid #FF6F61; /* Contour line (border) */
+    transition: transform 0.3s ease; /* Smooth scaling transition */
+}
+
+.dot-education:hover {
+    transform: translateX(-50%) scale(1.2); /* Increase size by 20% on hover */
+    z-index: 999;
+}
+
+.dot-education:nth-child(1) { top: 2vw; }
+.dot-education:nth-child(2) { top: 15vw; }
+.dot-education:nth-child(3) { top: 28vw; }
+
+.dot-logo-education {
+    width: 80%;
+    height: auto;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: transform 0.3s ease; /* Smooth scaling transition for the logo */
+}
+
+/* Text on the left of each dot */
+.text-left-education {
+    position: absolute;
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Center vertically based on the element's height */
+    right: calc(100% + 2vw); /* Shift to the left of the dot with padding */
+    width: max-content; /* Ensure the width adapts to text size */
+    text-align: center; /* Align text to the right */
+    max-width: 15vw;
+}
+
+
+/* Text on the right of each dot */
+.text-right-education {
+    position: absolute;
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Center vertically based on the element's height */
+    left: calc(100% + 2vw); /* Shift to the left of the dot with padding */
+    width: max-content; /* Ensure the width adapts to text size */
+    text-align: center; /* Align text to the right */
+    max-width: 15vw;
+}
+
+.popup-education {
+    display: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #4A5C6D;
+    color: whitesmoke;
+    padding: 1vw;
+    width: auto;
+    height: auto;
+    text-align: center;
+    border-radius: 7px;
+    border: 3px solid #FF6F61;
+    width: 20vw;
+    max-width: 25vw;
+    right: 450%;
+    width: max-content;
+}
+
+.popup-education ul {
+    list-style-type: disc;
+    padding-left: 1vw;
+    margin: 1vh 0;
+    text-align: left;
+}
+
+.popup-education h1 {
+    font-size: 1em;
+    color: whitesmoke;
+}
+
+.popup-education li {
+    font-size: 0.8em;
+    color: whitesmoke;
+    line-height: 1.5;
+}
+
+/* Show the square pop-up on hover of .dot */
+.dot-education:hover .popup-education {
+    display: block;
+}
+
+/*####################################################################################################*/
+/* PROGRAMMING */
+/*####################################################################################################*/
+.programming {
+    position: relative;
+    background-color: #2C333C;
+    margin: 5vw auto;
+    margin-bottom: 15vw;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.programming-dot {
+    width: 6.4vw;
+    height: 6.4vw;
+    background-color: #4A5C6D;
+    border-radius: 50%;
+    position: absolute;
+    transform: translateX(-50%);
+    text-align: center;
+    transition: transform 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.programming-dot:hover {
+    /* transform: translateX(-50%) scale(1.3); */
+    font-weight: bold;
+    background-color: #20252A;
+}
+
+.programming-hover-text {
+    display: none; /* Initially hidden */
+    position: absolute;
+    top: 120%; /* Position below the dot */
+    color: whitesmoke;
+    font-size: 0.9em;
+    text-align: left;
+}
+
+.programming-dot:hover .programming-hover-text {
+    display: block; /* Show on hover */
+}
+
+.programming-hover-text span {
+    opacity: 0;
+    animation: fadeIn 0.5s ease forwards;
+}
+
+.programming-dot:hover .programming-hover-text span:nth-child(1) {
+    animation-delay: 0s; /* First line appears immediately */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/*####################################################################################################*/
+/* PROJETCS */
+/*####################################################################################################*/
+.projects-container {
+    display: flex;
+    justify-content: flex-start; /* Align the projects to the left */
+    width: 90vw; /* Set width to 90% of the viewport width */
+    overflow-x: auto; /* Enable horizontal scrolling */
+    margin: 0 auto; /* Center the container horizontally */
+    margin-bottom: 5vw;
+    padding-left: 2vw; /* Add space from the left side */
+    padding-right: 2vw; /* Optional space from the right */
+    padding-bottom: 1vw; /* Add extra space below for scrollbar separation */
+    box-sizing: border-box; /* Ensure padding does not affect overall width */
+    position: relative; /* Enable absolute positioning inside */
+}
+
+/* Webkit-based browsers (Chrome, Safari, Edge) scrollbar styling */
+.projects-container::-webkit-scrollbar {
+    height: 0.6vw; /* Set the height of the horizontal scrollbar */
+}
+
+.projects-container::-webkit-scrollbar-thumb {
+    background-color: #FF6F61; /* Scrollbar thumb color */
+    border-radius: 1vw; /* Rounded edges */
+}
+
+.projects-container::-webkit-scrollbar-track {
+    background-color: #3A424C; /* Scrollbar track color */
+    border-radius: 1vw; /* Rounded corners for the track */
+}
+
+.projects {
+    display: flex;
+    gap: 40px; /* Space between project cards */
+    flex-wrap: nowrap; /* Prevent wrapping of cards */
+    padding: 1vw; /* No padding around the items */
+}
+
+.project-card { /* Individual project card styling */
+    width: 20vw; /* Set card width */
+    height: 25vw; /* Set card width */
+    padding: 2vw; /* Internal padding */
+    border-radius: 5%; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    position: relative; /* Allow positioning of link bubble */
+    background-color: #4A5C6D; /* White background for the card */
+    border: 3px solid #FF6F61;
+    text-align: left;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adjust color and opacity as needed */
+    transition: box-shadow 0.3s ease; /* Smooth transition */
+}
+
+.project-card img { /* Image styling within each project card */
+    width: 100%; /* Make image span card width */
+    height: 50%;
+    border-radius: 10px; /* Round top corners */
+}
+
+.project-card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Slightly larger shadow */
+    background-color: #3A424C;
+}
+
+.project-link { /* Styling for the link bubble */
+    position: absolute; /* Absolute positioning inside card */
+    top: 3%; /* Position link near top */
+    right: 3%; /* Position link near right */
+    background-color: #FF6F61; /* Red background for bubble */
+    border-radius: 50%; /* Make bubble circular */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow for link */
+    transition: transform 0.3s ease;
+    border: 3px solid whitesmoke;
+}
+
+.project-link img {
+    width: 5vw;  /* Adjust to fit the bubble size */
+    height: 5vw; /* Ensure it's square */
+    display: block; /* To avoid extra padding */
+}
+
+.project-link:hover {
+    transform: scale(1.2);
+}
+
+.project-card h1 { /* Text styling within each project card */
+    font-size: 1.8em;
+    font-weight: bold;
+    margin-top: 0px; /* Internal padding for text */
+    margin-bottom: -10px; /* Internal padding for text */
+}
+
+
+/*####################################################################################################*/
+/*CONTACT*/
+/*####################################################################################################*/
+.contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 5vw; /* Space between icons */
+    margin: 5vw 0;
+}
+
+.contact-link {
+    width: 4.5vw;
+    height: 4.5vw;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #2C333C;
+    border-radius: 50%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.contact-link img {
+    width: 100%;
+    height: 100%;
+}
+
+.contact-link:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/*####################################################################################################*/
+/* ARROW */
+/*####################################################################################################*/
+/*To-top Arrow*/
+.to-top{
+	color:whitesmoke;
+	padding-top:1.8em;
+	display:inline-block;/* or block */
+	position:relative;
+	border-color:whitesmoke;
+	text-decoration:none;
+	transition:all .3s ease-out;
+}
+.to-top:before{
+	content:'▲';
+	font-size:.9em;
+	position:absolute;
+	top:0;
+	left:50%;
+	margin-left:-.7em;
+	border:solid .13em whitesmoke;
+	border-radius:10em;
+	width:1.4em;
+	height:1.4em;
+	line-height:1.3em;
+	border-color:inherit;
+	transition:transform .5s ease-in;
+}
+.to-top:hover{
+	color:#FF6F61;
+	border-color:#FF6F61;
+}
+.to-top:hover:before{
+	transform: rotate(360deg);
+}
+
+
+
+
+
+
+
+
+
+
+
+.video {
+    width: 50%; /* Full width */
+    height: auto;
+    margin: 0 auto; /* Center the video */
+    padding: 0vh 0vw;
+}
+
+/*####################################################################################################*/
+/* Containers */
+/*####################################################################################################*/
+
+
+/*####################################################################################################*/
+/* Containers */
+/*####################################################################################################*/
+.section-bg-anthracite {
+    padding: 50px; /* Add some padding for content */
+    color: whitesmoke;
+    text-align: left;
+}
+
+
+/*####################################################################################################*/
+/*Video*/
+/*####################################################################################################*/
+/*Text*/
+/*####################################################################################################*/
+
+
+
+
+
+
+
+
+
+
+
+/*####################################################################################################*/
+/*Star dots*/
+/*####################################################################################################*/
+/* Container Centering */
+
+/*####################################################################################################*/
+/*Projects*/
+/*####################################################################################################*/
+
+
+
+
