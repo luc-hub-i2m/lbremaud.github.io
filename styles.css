@@ -112,8 +112,8 @@ main {
 /*####################################################################################################*/
 .video-gepi {
     width: 50%; /* Adjust to desired size */
-    margin: -10vh auto; /* Center the container */
-    padding-bottom: 10vh;
+    margin: -10vw auto; /* Center the container */
+    padding-bottom: 15vw;
 }
 
 .video-gepi video {
@@ -251,12 +251,12 @@ main {
     transform: translateY(-50%);
     background-color: #4A5C6D;
     color: whitesmoke;
-    padding: 1vw;
+    padding: 1vw 1vw;
     width: auto;
     height: auto;
     text-align: center;
-    border-radius: 7px;
-    border: 3px solid #FF6F61;
+    border-radius: 0.5vw;
+    border: 0.2vw solid #FF6F61;
     width: 20vw;
     max-width: 25vw;
     left: 450%;
@@ -265,7 +265,7 @@ main {
 
 .popup-work ul {
     list-style-type: disc;
-    padding-left: 1vw;
+    padding-left: 1.5vw;
     margin: 1vh 0;
     text-align: left;
 }
@@ -362,8 +362,8 @@ main {
     width: auto;
     height: auto;
     text-align: center;
-    border-radius: 7px;
-    border: 3px solid #FF6F61;
+    border-radius: 0.5vw;
+    border: 0.2vw solid #FF6F61;
     width: 20vw;
     max-width: 25vw;
     right: 450%;
@@ -488,7 +488,7 @@ main {
 
 .projects {
     display: flex;
-    gap: 40px; /* Space between project cards */
+    gap: 1vw; /* Space between project cards */
     flex-wrap: nowrap; /* Prevent wrapping of cards */
     padding: 1vw; /* No padding around the items */
 }
@@ -498,23 +498,23 @@ main {
     height: 25vw; /* Set card width */
     padding: 2vw; /* Internal padding */
     border-radius: 5%; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    box-shadow: 0 0.5vw 1vw rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
     position: relative; /* Allow positioning of link bubble */
     background-color: #4A5C6D; /* White background for the card */
-    border: 3px solid #FF6F61;
+    border: 0.2vw solid #FF6F61;
     text-align: left;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adjust color and opacity as needed */
+    box-shadow: 0 0.5vw 1vw rgba(0, 0, 0, 0.2); /* Adjust color and opacity as needed */
     transition: box-shadow 0.3s ease; /* Smooth transition */
 }
 
 .project-card img { /* Image styling within each project card */
     width: 100%; /* Make image span card width */
     height: 50%;
-    border-radius: 10px; /* Round top corners */
+    border-radius: 0.5vw; /* Round top corners */
 }
 
 .project-card:hover {
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Slightly larger shadow */
+    box-shadow: 0 1vw 2vw rgba(0, 0, 0, 0.3); /* Slightly larger shadow */
     background-color: #3A424C;
 }
 
@@ -524,9 +524,19 @@ main {
     right: 3%; /* Position link near right */
     background-color: #FF6F61; /* Red background for bubble */
     border-radius: 50%; /* Make bubble circular */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow for link */
+    box-shadow: 0 0.5vw 1vw rgba(0, 0, 0, 0.2); /* Subtle shadow for link */
     transition: transform 0.3s ease;
-    border: 3px solid whitesmoke;
+    border: 0.2vw solid whitesmoke;
+}
+
+.project-link .overlay-icon {
+    position: absolute;
+    width: 2vw; /* Size of the overlay icon */
+    height: 2vw; /* Square shape */
+    bottom: -0.4vw; /* Slightly outside the main bubble */
+    right: -0.2vw; /* Slightly outside the main bubble */
+    border-radius: 50%; /* Optional: make it circular */
+    background-color: #FFA290; /* Optional: background for contrast */
 }
 
 .project-link img {
@@ -542,8 +552,8 @@ main {
 .project-card h1 { /* Text styling within each project card */
     font-size: 1.8em;
     font-weight: bold;
-    margin-top: 0px; /* Internal padding for text */
-    margin-bottom: -10px; /* Internal padding for text */
+    margin-top: 0vw; /* Internal padding for text */
+    margin-bottom: -1vw; /* Internal padding for text */
 }
 
 
@@ -566,7 +576,7 @@ main {
     background-color: #2C333C;
     border-radius: 50%;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0.5vw 1vw rgba(0, 0, 0, 0.2);
 }
 
 .contact-link img {
@@ -576,7 +586,7 @@ main {
 
 .contact-link:hover {
     transform: scale(1.1);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 1vw 2vw rgba(0, 0, 0, 0.3);
 }
 
 /*####################################################################################################*/
@@ -614,64 +624,5 @@ main {
 .to-top:hover:before{
 	transform: rotate(360deg);
 }
-
-
-
-
-
-
-
-
-
-
-
-.video {
-    width: 50%; /* Full width */
-    height: auto;
-    margin: 0 auto; /* Center the video */
-    padding: 0vh 0vw;
-}
-
-/*####################################################################################################*/
-/* Containers */
-/*####################################################################################################*/
-
-
-/*####################################################################################################*/
-/* Containers */
-/*####################################################################################################*/
-.section-bg-anthracite {
-    padding: 50px; /* Add some padding for content */
-    color: whitesmoke;
-    text-align: left;
-}
-
-
-/*####################################################################################################*/
-/*Video*/
-/*####################################################################################################*/
-/*Text*/
-/*####################################################################################################*/
-
-
-
-
-
-
-
-
-
-
-
-/*####################################################################################################*/
-/*Star dots*/
-/*####################################################################################################*/
-/* Container Centering */
-
-/*####################################################################################################*/
-/*Projects*/
-/*####################################################################################################*/
-
-
 
 
