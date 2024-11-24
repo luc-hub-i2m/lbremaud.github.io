@@ -88,6 +88,7 @@ main {
 /*####################################################################################################*/
 .about {
     padding-top: 2vh; /* Add some padding for content */
+    padding-bottom: 4vw;
     color: whitesmoke;
     text-align: left;
 }
@@ -105,15 +106,19 @@ main {
     font-weight: normal;
     max-width: 50vw;
     margin-left: 13vw;
+    z-index: 1000;
 }
 
 /*####################################################################################################*/
-/* VIDEOS */
+/* VIDEO GEPI */
 /*####################################################################################################*/
 .video-gepi {
     width: 50%; /* Adjust to desired size */
     margin: -10vw auto; /* Center the container */
-    padding-bottom: 15vw;
+    margin-left: 13vw;
+    margin-bottom: 10vw;
+    position: relative;
+    z-index: 10;
 }
 
 .video-gepi video {
@@ -121,11 +126,56 @@ main {
     height: auto; /* Maintain aspect ratio */
 }
 
+.video-gepi .title-gepi {
+    margin-top: -5vw; /* Add some space between the video and the text */
+    font-style: italic; /* Italicize the text */
+    font-size: 1.em; /* Adjust font size if needed */
+    color: whitesmoke; /* Adjust text color if desired */
+}
+
+.video-gepi .hover-line-gepi {
+    position: absolute;
+    top: 12vw; /* Center vertically relative to the video-gepi container */
+    right: -32vw; /* Align with the right edge of the video */
+    transform: translateY(-50%); /* Correct vertical alignment */
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.5s ease; /* Smooth fade-in effect */
+    height: 110%;
+}
+
+.video-gepi:hover .hover-line-gepi {
+    opacity: 1; /* Show on hover */
+}
+
+.video-gepi .hover-line-gepi .line-gepi {
+    width: 2px; /* Thickness of the line */
+    height: 80%; /* Adjust the line height as needed */
+    background-color: whitesmoke; /* Line color */
+    display: block; /* Ensure it's rendered */
+}
+
+.video-gepi .hover-line-gepi .hover-text-gepi {
+    font-size: 1em; /* Text size */
+    color: whitesmoke; /* Text color */
+    text-align: left; /* Align text to the left */
+    max-width: 32vw; /* Restrict maximum width of the text container */
+    word-wrap: break-word; /* Break long words if necessary */
+    overflow-wrap: break-word; /* Alternate for better support */
+    white-space: normal; /* Allow normal wrapping behavior */
+    line-height: 1.5; /* Add spacing between lines for readability */
+}
+
+/*####################################################################################################*/
+/* VIDEO EOI */
+/*####################################################################################################*/
 .video-eoi {
     height: 80%; /* Adjust to desired size */
     position:absolute;
     top:70vw;
-    left: 60vw;
+    left: 50vw;
 }
 
 .video-eoi video {
@@ -133,15 +183,104 @@ main {
     height: auto; /* Maintain aspect ratio */
 }
 
+.video-eoi .title-eoi {
+    margin-top: -39vw; /* Add some space between the video and the text */
+    font-style: italic; /* Italicize the text */
+    font-size: 1.em; /* Adjust font size if needed */
+    color: whitesmoke; /* Adjust text color if desired */
+}
+
+.video-eoi .hover-line-eoi {
+    position: absolute;
+    top: 31vw; /* Center vertically relative to the video-gepi container */
+    right: -13vw; /* Align with the right edge of the video */
+    transform: translateY(-50%); /* Correct vertical alignment */
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.5s ease; /* Smooth fade-in effect */
+    height: 20vw;
+}
+
+.video-eoi:hover .hover-line-eoi {
+    opacity: 1; /* Show on hover */
+}
+
+.video-eoi .hover-line-eoi .line-eoi {
+    width: 2px; /* Thickness of the line */
+    height: 80%; /* Adjust the line height as needed */
+    background-color: whitesmoke; /* Line color */
+    display: block; /* Ensure it's rendered */
+}
+
+.video-eoi .hover-line-eoi .hover-text-eoi {
+    font-size: 1em; /* Text size */
+    color: whitesmoke; /* Text color */
+    text-align: left; /* Align text to the left */
+    max-width: 22vw; /* Restrict maximum width of the text container */
+    word-wrap: break-word; /* Break long words if necessary */
+    overflow-wrap: break-word; /* Alternate for better support */
+    white-space: normal; /* Allow normal wrapping behavior */
+    line-height: 1.5; /* Add spacing between lines for readability */
+}
+
+/*####################################################################################################*/
+/* VIDEO IMPACT */
+/*####################################################################################################*/
 .video-impact {
     height: 100%; /* Adjust to desired size */
+    width: 50%;
     position: relative;
-    left: 10vw;
+    left: 40vw;
 }
 
 .video-impact video {
     width: 50vw; /* Make the video fill the parent container */
     height: auto; /* Maintain aspect ratio */
+}
+
+.video-impact .title-impact {
+    margin-top: -1vw; /* Add some space between the video and the text */
+    margin-right: 23vw;
+    font-style: italic; /* Italicize the text */
+    font-size: 1.em; /* Adjust font size if needed */
+    color: whitesmoke; /* Adjust text color if desired */
+}
+
+.video-impact .hover-line-impact {
+    position: absolute;
+    top: 21vw; /* Center vertically relative to the video-gepi container */
+    left: -25vw; /* Align with the right edge of the video */
+    transform: translateY(-50%); /* Correct vertical alignment */
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.5s ease; /* Smooth fade-in effect */
+    height: 20vw;
+}
+
+.video-impact:hover .hover-line-impact {
+    opacity: 1; /* Show on hover */
+}
+
+.video-impact .hover-line-impact .line-impact {
+    width: 2px; /* Thickness of the line */
+    height: 67%; /* Adjust the line height as needed */
+    background-color: whitesmoke; /* Line color */
+    display: block; /* Ensure it's rendered */
+}
+
+.video-impact .hover-line-impact .hover-text-impact {
+    font-size: 1em; /* Text size */
+    color: whitesmoke; /* Text color */
+    text-align: left; /* Align text to the left */
+    max-width: 25vw; /* Restrict maximum width of the text container */
+    word-wrap: break-word; /* Break long words if necessary */
+    overflow-wrap: break-word; /* Alternate for better support */
+    white-space: normal; /* Allow normal wrapping behavior */
+    line-height: 1.5; /* Add spacing between lines for readability */
 }
 
 /*####################################################################################################*/
@@ -170,7 +309,7 @@ main {
 /* WORK EXPERIENCE */
 /*####################################################################################################*/
 .section{
-    margin-top: -47.75vw;
+    margin-top: -46.75vw;
 }
 
 .timeline-work {
@@ -400,7 +539,7 @@ main {
     position: relative;
     background-color: #2C333C;
     margin: 5vw auto;
-    margin-bottom: 15vw;
+    margin-bottom: 13vw;
     text-align: center;
     display: flex;
     align-items: center;

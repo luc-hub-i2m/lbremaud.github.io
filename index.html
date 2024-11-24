@@ -32,7 +32,7 @@
         <section class="about">
             <h1 class="main-title">Hello There!</h1>
             <h2 class="sub-title">I'm Luc, a research scientist working on the numerical modeling of material behavior under dynamic loading conditions</h2>
-            <h2 class="sub-title" style="font-weight: bold; padding: 5vw 0">Check it out!</h2>
+            <h2 class="sub-title" style="font-weight: bold; padding: 5vw 0; z-index: 1000">Check it out!</h2>
         </section>
 
         <!-- Video -->
@@ -41,6 +41,19 @@
                 <!-- <source src="https://github.com/luc-hub-i2m/lbremaud.github.io/raw/main/images/GEPI.mp4" type="video/mp4"> -->
                 <source src="images/GEPI.mp4" type="video/mp4">
             </video>
+            <p class="title-gepi">Bond's stress in a shockless high-pulsed power spalling simulation</p>
+            <div class="hover-line-gepi">
+                <div class="line-gepi"></div>
+                <span class="hover-text-gepi">
+                    <strong>Codes </strong><br />GranOO / Python / Paraview<br />
+                    <strong>Project </strong><br />PhD<br />
+                    <strong>Details </strong><br />
+                    An AL23 ceramic target is modeled with the Discrete Element Method (DEM).
+                    An experimental pressure pulse is applied to its front face.
+                    The reflection of the first incident compressive stress wave on the rear face interacts with the second and generates tensile in the target.
+                    The tensile stress state leads to fragmentation - spalling - by bond removal.<br />
+                </span>
+            </div>
         </div>
 
         <!-- Work experience -->
@@ -58,6 +71,18 @@
                 <!-- <source src="https://github.com/luc-hub-i2m/lbremaud.github.io/raw/main/images/EOI.mp4" type="video/mp4"> -->
                 <source src="images/EOI.mp4" type="video/mp4">
             </video>
+            <p class="title-eoi">Bond's stress in a Edge-On-Impact (EOI) simulation</p>
+            <div class="hover-line-eoi">
+                <div class="line-eoi"></div>
+                <span class="hover-text-eoi">
+                    <strong>Codes </strong><br />GranOO / Python / Paraview<br />
+                    <strong>Project </strong><br />PhD<br />
+                    <strong>Details </strong><br />
+                    An AL23 ceramic target is modeled with the Discrete Element Method (DEM).
+                    A steel projectile is impacted on the edge of the target. Orthoradial and spalling cracks appear due to tensile stress state.
+                    The impact zone is completely fragmented.<br />
+                </span>
+            </div>
         </div>
         
         <!-- Education -->
@@ -71,7 +96,7 @@
         </script>
         
         <!-- Programming -->
-        <div id="skills"></div>
+        <div id="skills" style="margin-top: 10vw;"></div>
         <script>
             fetch("programming.html")
                 .then(response => response.text())
@@ -105,9 +130,21 @@
                 <!-- <source src="https://github.com/luc-hub-i2m/lbremaud.github.io/raw/main/images/impact.mp4" type="video/mp4"> -->
                 <source src="images/impact.mp4" type="video/mp4">
             </video>
+            <p class="title-impact">Stress field in a impacted composite simulation</p>
+            <div class="hover-line-impact">
+                <div class="line-impact"></div>
+                <span class="hover-text-impact">
+                    <strong>Codes </strong><br />ABAQUS / Python<br />
+                    <strong>Project </strong><br />Internship mentoring<br />
+                    <strong>Details </strong><br />
+                    A 16-ply composite plate is impacted with a rigid projectile.
+                    This study investigated the effect of each failure mode (through a failure mode mixity criterion)
+                    with the projectile velocity.<br />
+                </span>
+            </div>
         </div>
     </main>
 
-    <a href="#" class="to-top" style="margin-bottom:3vh; margin-top:0%;">Back to top</a>
+    <a href="#" class="to-top" style="margin-bottom:3vh; margin-top:2vw;">Back to top</a>
 </body>
 </html>
