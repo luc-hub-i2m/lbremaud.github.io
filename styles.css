@@ -242,10 +242,12 @@ main {
 
 .video-impact .title-impact {
     margin-top: -1vw; /* Add some space between the video and the text */
-    margin-right: 23vw;
+    margin-right: 20vw;
     font-style: italic; /* Italicize the text */
     font-size: 1.em; /* Adjust font size if needed */
     color: whitesmoke; /* Adjust text color if desired */
+    white-space: nowrap; /* Prevent line breaks */
+    overflow: hidden;
 }
 
 .video-impact .hover-line-impact {
