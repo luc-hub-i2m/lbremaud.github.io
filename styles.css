@@ -143,7 +143,7 @@ main {
     gap: 0.5em;
     opacity: 0; /* Initially hidden */
     transition: opacity 0.5s ease; /* Smooth fade-in effect */
-    height: 110%;
+    height: 20vw;
 }
 
 .video-gepi:hover .hover-line-gepi {
@@ -260,7 +260,7 @@ main {
     gap: 0.5em;
     opacity: 0; /* Initially hidden */
     transition: opacity 0.5s ease; /* Smooth fade-in effect */
-    height: 20vw;
+    height: 19vw;
 }
 
 .video-impact:hover .hover-line-impact {
