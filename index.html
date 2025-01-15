@@ -66,6 +66,33 @@
                 });
         </script>
 
+        <div class="img-composite">
+            <img src="images/composite.png"/>
+            <p class="title-composite">3D woven composite mesh</p>
+            <div class="hover-line-composite">
+                <div class="line-composite"></div>
+                <span class="hover-text-composite">
+                    <strong>Codes </strong><br />Python / Gmsh<br />
+                    <strong>Project </strong><br />PhD mentoring<br />
+                    <strong>Details </strong><br />
+                    Due to the limited availability of flexible tools, a custom Python code
+                    has been developed to generate 3D woven composites. This tool provides extensive versatility,
+                    allowing users to define almost everything.
+                    This work is part of a PhD research project that investigates the behavior of 3D woven composites under impact.<br />
+                </span>
+            </div>
+        </div>
+        
+        <!-- Education -->
+        <div id="school"></div>
+        <script>
+            fetch("education.html")
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("school").innerHTML = data;
+                });
+        </script>
+
         <div class="video-eoi">
             <video autoplay loop muted>
                 <!-- <source src="https://github.com/luc-hub-i2m/lbremaud.github.io/raw/main/images/EOI.mp4" type="video/mp4"> -->
@@ -85,18 +112,8 @@
             </div>
         </div>
         
-        <!-- Education -->
-        <div id="school"></div>
-        <script>
-            fetch("education.html")
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById("school").innerHTML = data;
-                });
-        </script>
-        
         <!-- Programming -->
-        <div id="skills" style="margin-top: 10vw;"></div>
+        <div id="skills" style="margin-top: 40vw;"></div>
         <script>
             fetch("programming.html")
                 .then(response => response.text())

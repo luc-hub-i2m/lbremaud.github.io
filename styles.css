@@ -174,7 +174,7 @@ main {
 .video-eoi {
     height: 80%; /* Adjust to desired size */
     position:absolute;
-    top:70vw;
+    top:155vw;
     left: 50vw;
 }
 
@@ -192,8 +192,8 @@ main {
 
 .video-eoi .hover-line-eoi {
     position: absolute;
-    top: 31vw; /* Center vertically relative to the video-gepi container */
-    right: -13vw; /* Align with the right edge of the video */
+    top: 19vw; /* Center vertically relative to the video-gepi container */
+    left: -22vw; /* Align with the right edge of the video */
     transform: translateY(-50%); /* Correct vertical alignment */
     display: flex;
     align-items: center;
@@ -215,6 +215,64 @@ main {
 }
 
 .video-eoi .hover-line-eoi .hover-text-eoi {
+    font-size: 1em; /* Text size */
+    color: whitesmoke; /* Text color */
+    text-align: left; /* Align text to the left */
+    max-width: 22vw; /* Restrict maximum width of the text container */
+    word-wrap: break-word; /* Break long words if necessary */
+    overflow-wrap: break-word; /* Alternate for better support */
+    white-space: normal; /* Allow normal wrapping behavior */
+    line-height: 1.5; /* Add spacing between lines for readability */
+}
+
+/*####################################################################################################*/
+/* IMG COMPOSITE */
+/*####################################################################################################*/
+.img-composite {
+    height: 80%; /* Adjust to desired size */
+    position:absolute;
+    top:60vw;
+    left: 44vw;
+}
+
+.img-composite img {
+    width: 30vw; /* Make the video fill the parent container */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.img-composite .title-composite {
+    margin-top: -16vw; /* Add some space between the video and the text */
+    margin-left:10vw;
+    font-style: italic; /* Italicize the text */
+    font-size: 1.em; /* Adjust font size if needed */
+    color: whitesmoke; /* Adjust text color if desired */
+}
+
+.img-composite .hover-line-composite {
+    position: absolute;
+    top: 7vw; /* Center vertically relative to the video-gepi container */
+    right: -23vw; /* Align with the right edge of the video */
+    transform: translateY(-50%); /* Correct vertical alignment */
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.5s ease; /* Smooth fade-in effect */
+    height: 25vw;
+}
+
+.img-composite:hover .hover-line-composite {
+    opacity: 1; /* Show on hover */
+}
+
+.img-composite .hover-line-composite .line-composite {
+    width: 2px; /* Thickness of the line */
+    height: 80%; /* Adjust the line height as needed */
+    background-color: whitesmoke; /* Line color */
+    display: block; /* Ensure it's rendered */
+}
+
+.img-composite .hover-line-composite .hover-text-composite {
     font-size: 1em; /* Text size */
     color: whitesmoke; /* Text color */
     text-align: left; /* Align text to the left */
@@ -310,17 +368,13 @@ main {
 /*####################################################################################################*/
 /* WORK EXPERIENCE */
 /*####################################################################################################*/
-.section{
-    margin-top: -46.75vw;
-}
-
 .timeline-work {
     position: relative;
     width: 0.2vw; /* Adjust thickness */
     background-color: whitesmoke;
     margin: 0 auto;
     right: 20vw;
-    height: 118vw;
+    height: 99vw;
 }
 
 .dot-work {
@@ -346,7 +400,7 @@ main {
 .dot-work:nth-child(4) { top: 41vw; }
 .dot-work:nth-child(5) { top: 54vw; }
 .dot-work:nth-child(6) { top: 67vw; }
-.dot-work:nth-child(7) { top: 80vw; }
+/* .dot-work:nth-child(7) { top: 80vw; } */
 
 .dot-logo-work {
     width: 80%;
@@ -430,13 +484,17 @@ main {
 /*####################################################################################################*/
 /* EDUCATION */
 /*####################################################################################################*/
+.section{
+    margin-top: -80.75vw;
+}
+
 .timeline-education {
     position: relative;
     width: 0.2vw; /* Adjust thickness */
     background-color: whitesmoke;
     margin: 0 auto;
     left: 20vw;
-    height: 47vw;
+    height: 63vw;
 }
 
 .dot-education {
@@ -459,6 +517,7 @@ main {
 .dot-education:nth-child(1) { top: 2vw; }
 .dot-education:nth-child(2) { top: 15vw; }
 .dot-education:nth-child(3) { top: 28vw; }
+.dot-education:nth-child(4) { top: 41vw; }
 
 .dot-logo-education {
     width: 80%;
@@ -635,8 +694,8 @@ main {
 }
 
 .project-card { /* Individual project card styling */
-    width: 20vw; /* Set card width */
-    height: 25vw; /* Set card width */
+    width: 15vw; /* Set card width */
+    height: 20vw; /* Set card width */
     padding: 2vw; /* Internal padding */
     border-radius: 5%; /* Rounded corners */
     box-shadow: 0 0.5vw 1vw rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
@@ -681,8 +740,8 @@ main {
 }
 
 .project-link img {
-    width: 5vw;  /* Adjust to fit the bubble size */
-    height: 5vw; /* Ensure it's square */
+    width: 4vw;  /* Adjust to fit the bubble size */
+    height: 4vw; /* Ensure it's square */
     display: block; /* To avoid extra padding */
 }
 
@@ -691,12 +750,15 @@ main {
 }
 
 .project-card h1 { /* Text styling within each project card */
-    font-size: 1.8em;
+    font-size: 1.3em;
     font-weight: bold;
     margin-top: 0vw; /* Internal padding for text */
     margin-bottom: -1vw; /* Internal padding for text */
 }
 
+.project-card p { /* Text styling within each project card */
+    font-size: 0.9rem;
+}
 
 /*####################################################################################################*/
 /*CONTACT*/
