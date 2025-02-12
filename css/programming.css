@@ -1,0 +1,57 @@
+#programming-page .container {
+    position: relative;
+    background-color: #2C333C;
+    margin: 5vw auto;
+    margin-bottom: 13vw;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#programming-page .dot {
+    width: 6.4vw;
+    height: 6.4vw;
+    background-color: #4A5C6D;
+    border-radius: 50%;
+    position: absolute;
+    transform: translateX(-50%);
+    text-align: center;
+    transition: transform 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#programming-page .dot:hover {
+    /* transform: translateX(-50%) scale(1.3); */
+    font-weight: bold;
+    background-color: #20252A;
+}
+
+#programming-page .hover-text {
+    display: none; /* Initially hidden */
+    position: absolute;
+    top: 120%; /* Position below the dot */
+    color: whitesmoke;
+    font-size: 0.9em;
+    text-align: left;
+}
+
+#programming-page .dot:hover .hover-text {
+    display: block; /* Show on hover */
+}
+
+#programming-page .hover-text span {
+    opacity: 0;
+    animation: fadeIn 0.5s ease forwards;
+}
+
+#programming-page .dot:hover .hover-text span:nth-child(1) {
+    animation-delay: 0s; /* First line appears immediately */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}

@@ -1,0 +1,102 @@
+#projects-page .container {
+    display: flex;
+    justify-content: flex-start; /* Align the projects to the left */
+    width: 90vw; /* Set width to 90% of the viewport width */
+    overflow-x: auto; /* Enable horizontal scrolling */
+    margin: 0 auto; /* Center the container horizontally */
+    margin-bottom: 5vw;
+    padding-left: 2vw; /* Add space from the left side */
+    padding-right: 2vw; /* Optional space from the right */
+    padding-bottom: 1vw; /* Add extra space below for scrollbar separation */
+    box-sizing: border-box; /* Ensure padding does not affect overall width */
+    position: relative; /* Enable absolute positioning inside */
+}
+
+/* Webkit-based browsers (Chrome, Safari, Edge) scrollbar styling */
+#projects-page .container::-webkit-scrollbar {
+    height: 0.6vw; /* Set the height of the horizontal scrollbar */
+}
+
+#projects-page .container::-webkit-scrollbar-thumb {
+    background-color: #FF6F61; /* Scrollbar thumb color */
+    border-radius: 1vw; /* Rounded edges */
+}
+
+#projects-page .container::-webkit-scrollbar-track {
+    background-color: #3A424C; /* Scrollbar track color */
+    border-radius: 1vw; /* Rounded corners for the track */
+}
+
+#projects-page .projects {
+    display: flex;
+    gap: 1vw; /* Space between project cards */
+    flex-wrap: nowrap; /* Prevent wrapping of cards */
+    padding: 1vw; /* No padding around the items */
+}
+
+#projects-page .card { /* Individual project card styling */
+    width: 15vw; /* Set card width */
+    height: 20vw; /* Set card width */
+    padding: 2vw; /* Internal padding */
+    border-radius: 5%; /* Rounded corners */
+    box-shadow: 0 0.5vw 1vw rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    position: relative; /* Allow positioning of link bubble */
+    background-color: #4A5C6D; /* White background for the card */
+    border: 0.2vw solid #FF6F61;
+    text-align: left;
+    box-shadow: 0 0.5vw 1vw rgba(0, 0, 0, 0.2); /* Adjust color and opacity as needed */
+    transition: box-shadow 0.3s ease; /* Smooth transition */
+}
+
+#projects-page .card img { /* Image styling within each project card */
+    width: 100%; /* Make image span card width */
+    height: 50%;
+    border-radius: 0.5vw; /* Round top corners */
+}
+
+#projects-page .card:hover {
+    box-shadow: 0 1vw 2vw rgba(0, 0, 0, 0.3); /* Slightly larger shadow */
+    background-color: #3A424C;
+}
+
+#projects-page .link { /* Styling for the link bubble */
+    position: absolute; /* Absolute positioning inside card */
+    top: 3%; /* Position link near top */
+    right: 3%; /* Position link near right */
+    background-color: #FF6F61; /* Red background for bubble */
+    border-radius: 50%; /* Make bubble circular */
+    box-shadow: 0 0.5vw 1vw rgba(0, 0, 0, 0.2); /* Subtle shadow for link */
+    transition: transform 0.3s ease;
+    border: 0.2vw solid whitesmoke;
+}
+
+#projects-page .link .overlay-icon {
+    position: absolute;
+    width: 2vw; /* Size of the overlay icon */
+    height: 2vw; /* Square shape */
+    bottom: -0.4vw; /* Slightly outside the main bubble */
+    right: -0.2vw; /* Slightly outside the main bubble */
+    border-radius: 50%; /* Optional: make it circular */
+    background-color: #FFA290; /* Optional: background for contrast */
+}
+
+#projects-page .link img {
+    width: 4vw;  /* Adjust to fit the bubble size */
+    height: 4vw; /* Ensure it's square */
+    display: block; /* To avoid extra padding */
+}
+
+#projects-page .link:hover {
+    transform: scale(1.2);
+}
+
+#projects-page .card h1 { /* Text styling within each project card */
+    font-size: 1.3em;
+    font-weight: bold;
+    margin-top: 0vw; /* Internal padding for text */
+    margin-bottom: -1vw; /* Internal padding for text */
+}
+
+#projects-page .card p { /* Text styling within each project card */
+    font-size: 0.9rem;
+}

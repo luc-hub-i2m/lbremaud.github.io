@@ -1,0 +1,46 @@
+html {
+    scroll-behavior: smooth;
+    font-size: 1vw;
+}
+
+body {
+    min-height: 100vh; /* Set the minimum height to full viewport height */
+    display: flex;
+    flex-direction: column; /* Arrange content vertically */
+    background: #2C333C;
+    color: whitesmoke;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    font-size: 1rem;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Optional: Prevent scrolling */
+    width: 100vw;
+    height: auto;
+}  
+
+main {
+    flex: 1; /* Take up any remaining space between header and footer */
+}
+
+.section-title-left {
+    font-size: 3rem; /* Smaller font for the subheading */
+    font-weight: bold;
+    text-align: left;
+    margin-left: 10vw;
+}
+
+.section-title-right {
+    font-size: 3rem; /* Smaller font for the subheading */
+    font-weight: bold;
+    text-align: right;
+    margin-right: 10vw;
+}
+
+.hidden-title {
+    visibility: hidden;
+    position: relative;
+}

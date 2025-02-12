@@ -7,16 +7,17 @@
     <meta name="description" content="Luc Brémaud's personal website, résumé and projects about my researches in numerical modelling of material behaviour under dynamic loading conditions.">
     <meta name="keywords" content="Luc Brémaud, web development, coding, research, science, projects, numerical modeling, GEPI, brittle, materials, simulations, GranOO, dynamic, material behaviour">
     <meta name="author" content="Luc Brémaud">
-    <title>Luc Brémaud | Research Scientist</title>
     <meta name="google-site-verification" content="MfvBiMqCURCGfvPsj385X_CfCNFmyGmt57wHaAKJFco" />
+    <title>Luc Brémaud | Research Scientist</title>
 
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="global.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOMUc6iDfM3IUPPdgjF7FBck4F5xqAwj7b1yMMe8" crossorigin="anonymous">
 </head>
 
 <body>
     <!-- Header -->
+    <a id="top"></a>
     <div id="header" style="position: fixed; top: 0; width: 100%; z-index: 1000;"></div>
     <script>
         fetch("header.html")
@@ -28,140 +29,115 @@
 
     <!-- Main Content -->
     <main>
-        <!-- About -->
-        <section class="about">
-            <h1 class="main-title">Hello There!</h1>
-            <h2 class="sub-title">I'm Luc, a research scientist working on the numerical modeling of material behavior under dynamic loading conditions</h2>
-            <h2 class="sub-title" style="font-weight: bold; padding: 5vw 0; z-index: 1000">Check it out!</h2>
-        </section>
-
-        <!-- Video -->
-        <div class="video-gepi">
-            <video autoplay loop muted>
-                <!-- <source src="https://github.com/luc-hub-i2m/lbremaud.github.io/raw/main/images/GEPI.mp4" type="video/mp4"> -->
-                <source src="images/GEPI.mp4" type="video/mp4">
-            </video>
-            <p class="title-gepi">Bond's stress in a shockless high-pulsed power spalling simulation</p>
-            <div class="hover-line-gepi">
-                <div class="line-gepi"></div>
-                <span class="hover-text-gepi">
-                    <strong>Codes </strong><br />GranOO / Python / Paraview<br />
-                    <strong>Project </strong><br />PhD<br />
-                    <strong>Details </strong><br />
-                    An AL23 ceramic target is modeled with the Discrete Element Method (DEM).
-                    An experimental pressure pulse is applied to its front face.
-                    The reflection of the first incident compressive stress wave on the rear face interacts with the second and generates tensile in the target.
-                    The tensile stress state leads to fragmentation - spalling - by bond removal.<br />
-                </span>
-            </div>
-        </div>
+        <!-- About & GEPI video-->
+        <div id="about-placeholder"></div>
+        <script>
+            fetch("about.html")
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("about-placeholder").innerHTML = data;
+                });
+        </script>
 
         <!-- Work experience -->
-        <div id="work"></div>
+        <div id="work-placeholder"></div>
         <script>
             fetch("work.html")
                 .then(response => response.text())
                 .then(data => {
-                    document.getElementById("work").innerHTML = data;
+                    document.getElementById("work-placeholder").innerHTML = data;
                 });
         </script>
 
-        <div class="img-composite">
-            <img src="images/composite.png"/>
-            <p class="title-composite">2D woven composite mesh</p>
-            <div class="hover-line-composite">
-                <div class="line-composite"></div>
-                <span class="hover-text-composite">
-                    <strong>Codes </strong><br />Python / Gmsh<br />
-                    <strong>Project </strong><br />PhD mentoring<br />
-                    <strong>Details </strong><br />
-                    Due to the limited availability of flexible tools, a custom Python code
-                    has been developed to generate 2D woven composites. This tool provides extensive versatility,
-                    allowing users to define almost everything.
-                    This work is part of a PhD research project that investigates the behavior of 2D woven composites under impact.<br />
-                </span>
-            </div>
-        </div>
+        <!-- Composite mesh -->
+        <div id="composite-placeholder"></div>
+        <script>
+            fetch("composite.html")
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("composite-placeholder").innerHTML = data;
+                });
+        </script>
         
         <!-- Education -->
-        <div id="school"></div>
+        <div id="education-placeholder"></div>
         <script>
             fetch("education.html")
                 .then(response => response.text())
                 .then(data => {
-                    document.getElementById("school").innerHTML = data;
+                    document.getElementById("education-placeholder").innerHTML = data;
                 });
         </script>
 
-        <div class="video-eoi">
-            <video autoplay loop muted>
-                <!-- <source src="https://github.com/luc-hub-i2m/lbremaud.github.io/raw/main/images/EOI.mp4" type="video/mp4"> -->
-                <source src="images/EOI.mp4" type="video/mp4">
-            </video>
-            <p class="title-eoi">Bond's stress in a Edge-On-Impact (EOI) simulation</p>
-            <div class="hover-line-eoi">
-                <div class="line-eoi"></div>
-                <span class="hover-text-eoi">
-                    <strong>Codes </strong><br />GranOO / Python / Paraview<br />
-                    <strong>Project </strong><br />PhD<br />
-                    <strong>Details </strong><br />
-                    An AL23 ceramic target is modeled with the Discrete Element Method (DEM).
-                    A steel projectile is impacted on the edge of the target. Orthoradial and spalling cracks appear due to tensile stress state.
-                    The impact zone is completely fragmented.<br />
-                </span>
-            </div>
-        </div>
+        <!-- EOI -->
+        <div id="eoi-placeholder"></div>
+        <script>
+            fetch("eoi.html")
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("eoi-placeholder").innerHTML = data;
+                });
+        </script>
         
         <!-- Programming -->
-        <div id="skills" style="margin-top: 40vw;"></div>
+        <div id="programming-placeholder" style="margin-top: 40vw;"></div>
         <script>
             fetch("programming.html")
                 .then(response => response.text())
                 .then(data => {
-                    document.getElementById("skills").innerHTML = data;
+                    document.getElementById("programming-placeholder").innerHTML = data;
                 });
         </script>
 
         <!-- Projects -->
-        <div id="ideas"></div>
+        <div id="projects-placeholder" style="margin-top: 10vw;"></div>
         <script>
             fetch("projects.html")
                 .then(response => response.text())
                 .then(data => {
-                    document.getElementById("ideas").innerHTML = data;
+                    document.getElementById("projects-placeholder").innerHTML = data;
                 });
         </script>
 
-        <!-- Social Media -->
-        <div id="social"></div>
+        <!-- Contact -->
+        <div id="contact-placeholder"></div>
         <script>
             fetch("contact.html")
                 .then(response => response.text())
                 .then(data => {
-                    document.getElementById("social").innerHTML = data;
+                    document.getElementById("contact-placeholder").innerHTML = data;
                 });
         </script>
 
-        <div class="video-impact">
-            <video autoplay loop muted>
-                <!-- <source src="https://github.com/luc-hub-i2m/lbremaud.github.io/raw/main/images/impact.mp4" type="video/mp4"> -->
-                <source src="images/impact.mp4" type="video/mp4">
-            </video>
-            <p class="title-impact">Stress field in an impacted composite plate simulation</p>
-            <div class="hover-line-impact">
-                <div class="line-impact"></div>
-                <span class="hover-text-impact">
-                    <strong>Codes </strong><br />ABAQUS / Python<br />
-                    <strong>Project </strong><br />Internship mentoring<br />
-                    <strong>Details </strong><br />
-                    A 16-ply composite plate is impacted with a rigid projectile.
-                    This study investigated the effect of each failure mode
-                    on the inter-ply cohesive law with the projectile velocity.<br />
-                </span>
-            </div>
-        </div>
-    </main>
+        <!-- Impact -->
+        <div id="impact-placeholder"></div>
+        <script>
+            fetch("impact.html")
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("impact-placeholder").innerHTML = data;
+                });
+        </script>
 
-    <a href="#" class="to-top" style="margin-bottom:3vh; margin-top:2vw;">Back to top</a>
+        <!-- Research -->
+        <div id="research-placeholder"></div>
+        <script>
+            fetch("research.html")
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("research-placeholder").innerHTML = data;
+                });
+        </script>
+
+        <!-- Arrow -->
+        <div id="top-placeholder"></div>
+        <script>
+            fetch("top.html")
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("top-placeholder").innerHTML = data;
+                });
+        </script>
+    </main>
 </body>
 </html>

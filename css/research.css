@@ -1,0 +1,76 @@
+#research-page .container {
+    padding-left: 2vw;
+    padding-right: 2vw;
+    background-color: #2C333C; /* Adjust to fit your website theme */
+    width: 90vw;
+    margin: 0 auto;
+}
+
+#research-page .grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Always 4 columns */
+    grid-gap: 1rem;
+    max-height: 25vw; /* Limit the height of the grid */
+    overflow-y: auto; /* Vertical scrollbar */
+    overflow-x: hidden; /* Prevent horizontal scroll */
+    padding: 1rem;
+    background: #2C333C;
+    border: 1px solid #2C333C;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#research-page .grid::-webkit-scrollbar {
+    height: 0.6vw; /* Set the height of the horizontal scrollbar */
+}
+
+#research-page .grid::-webkit-scrollbar-thumb {
+    background-color: #FF6F61; /* Scrollbar thumb color */
+    border-radius: 1vw; /* Rounded edges */
+}
+
+#research-page .grid::-webkit-scrollbar-track {
+    background-color: #3A424C; /* Scrollbar track color */
+    border-radius: 1vw; /* Rounded corners for the track */
+}
+
+/* Wrapper for title and card to ensure they stay together */
+#research-page .video-card-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Style for the video title above the card */
+#research-page .video-title {
+    padding: 0rem 0.5rem;
+    text-align: center;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    color: whitesmoke;
+    margin-bottom: 0rem; /* Space between title and card */
+}
+
+/* Style for the card */
+#research-page .card {
+    position: relative;
+    border: 1px solid #FF6F61;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #4A5C6D;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    display: block; /* Ensure the card is a block element */
+}
+
+#research-page .card:hover {
+    box-shadow: 0 1vw 2vw rgba(0, 0, 0, 0.3); /* Slightly larger shadow */
+    background-color: #3A424C;
+}
+
+#research-page .card video {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    /* Keep the video visible */
+}

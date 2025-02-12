@@ -1,0 +1,57 @@
+#impact-page .container {
+    height: 100%; /* Adjust to desired size */
+    width: 50%;
+    position: relative;
+    left: 40vw;
+    margin-bottom: 5vw;
+}
+
+#impact-page .container video {
+    width: 50vw; /* Make the video fill the parent container */
+    height: auto; /* Maintain aspect ratio */
+}
+
+#impact-page .container .title {
+    margin-top: -1vw; /* Add some space between the video and the text */
+    margin-right: 20vw;
+    font-style: italic; /* Italicize the text */
+    font-size: 1.em; /* Adjust font size if needed */
+    color: whitesmoke; /* Adjust text color if desired */
+    white-space: nowrap; /* Prevent line breaks */
+    overflow: hidden;
+}
+
+#impact-page .container .hover-line {
+    position: absolute;
+    top: 21vw; /* Center vertically relative to the video-gepi container */
+    left: -25vw; /* Align with the right edge of the video */
+    transform: translateY(-50%); /* Correct vertical alignment */
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.5s ease; /* Smooth fade-in effect */
+    height: 19vw;
+}
+
+#impact-page .container:hover .hover-line {
+    opacity: 1; /* Show on hover */
+}
+
+#impact-page .container .hover-line .line {
+    width: 2px; /* Thickness of the line */
+    height: 67%; /* Adjust the line height as needed */
+    background-color: whitesmoke; /* Line color */
+    display: block; /* Ensure it's rendered */
+}
+
+#impact-page .container .hover-line .hover-text {
+    font-size: 1em; /* Text size */
+    color: whitesmoke; /* Text color */
+    text-align: left; /* Align text to the left */
+    max-width: 25vw; /* Restrict maximum width of the text container */
+    word-wrap: break-word; /* Break long words if necessary */
+    overflow-wrap: break-word; /* Alternate for better support */
+    white-space: normal; /* Allow normal wrapping behavior */
+    line-height: 1.5; /* Add spacing between lines for readability */
+}

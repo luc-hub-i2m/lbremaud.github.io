@@ -1,0 +1,53 @@
+/*####################################################################################################*/
+/* HEADER */
+/*####################################################################################################*/
+.header-nav ul {
+    list-style: none;
+    display: flex; /* Arrange items in a row */
+    align-items: center; /* Center items vertically */
+}
+
+.header-nav li {
+    margin: 0 1vw;
+}
+
+.header-nav a {
+    color: whitesmoke;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.header-nav a:hover {
+    color: #FF6F61;
+}
+
+.home-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: whitesmoke;
+    font-weight: bold;
+}
+
+.home-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    background-color: #FF6F61;
+    color: whitesmoke;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-right: 1vw;
+}
+
+.home-link:hover .home-logo {
+    color: #FF6F61; /* Change text color on hover */
+    background-color: #3F4C5C; /* Optional: change background color */
+}
+
+.home-name {
+    font-size: 1.1rem;
+}

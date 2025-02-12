@@ -1,0 +1,112 @@
+#work-page .timeline {
+    position: relative;
+    width: 0.2vw; /* Adjust thickness */
+    background-color: whitesmoke;
+    margin: 0 auto;
+    right: 20vw;
+    height: 99vw;
+}
+
+#work-page .dot {
+    width: 4.5vw;
+    height: 4.5vw;
+    background-color: whitesmoke;
+    border-radius: 50%;
+    position: relative;
+    transform: translateX(-50%);
+    text-align: center;
+    border: 0.2vw solid #FF6F61; /* Contour line (border) */
+    transition: transform 0.3s ease; /* Smooth scaling transition */
+}
+
+#work-page .dot:hover {
+    transform: translateX(-50%) scale(1.2); /* Increase size by 20% on hover */
+    z-index: 999;
+}
+
+#work-page .dot:nth-child(1) { top: 2vw; }
+#work-page .dot:nth-child(2) { top: 15vw; }
+#work-page .dot:nth-child(3) { top: 28vw; }
+#work-page .dot:nth-child(4) { top: 41vw; }
+#work-page .dot:nth-child(5) { top: 54vw; }
+#work-page .dot:nth-child(6) { top: 67vw; }
+/* .dot:nth-child(7) { top: 80vw; } */
+
+#work-page .dot-logo {
+    width: 80%;
+    height: auto;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: transform 0.3s ease; /* Smooth scaling transition for the logo */
+}
+
+/* Text on the left of each dot */
+#work-page .text-left {
+    position: absolute;
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Center vertically based on the element's height */
+    right: calc(100% + 2vw); /* Shift to the left of the dot with padding */
+    width: max-content; /* Ensure the width adapts to text size */
+    text-align: center; /* Align text to the right */
+    max-width: 20vw;
+}
+
+
+/* Text on the right of each dot */
+#work-page .text-right {
+    position: absolute;
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Center vertically based on the element's height */
+    left: calc(100% + 2vw); /* Shift to the left of the dot with padding */
+    width: max-content; /* Ensure the width adapts to text size */
+    text-align: center; /* Align text to the right */
+    max-width: 20vw;
+}
+
+/* Text location & date */
+#work-page .text-color {
+    color: pink; /* Example styling */
+}
+
+#work-page .popup {
+    display: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #4A5C6D;
+    color: whitesmoke;
+    padding: 1vw 1vw;
+    width: auto;
+    height: auto;
+    text-align: center;
+    border-radius: 0.5vw;
+    border: 0.2vw solid #FF6F61;
+    width: 20vw;
+    max-width: 25vw;
+    left: 450%;
+    width: max-content;
+}
+
+#work-page .popup ul {
+    list-style-type: disc;
+    padding-left: 1.5vw;
+    margin: 1vh 0;
+    text-align: left;
+}
+
+#work-page .popup h1 {
+    font-size: 1em;
+    color: whitesmoke;
+}
+
+#work-page .popup li {
+    font-size: 0.8em;
+    color: whitesmoke;
+    line-height: 1.5;
+}
+
+/* Show the square pop-up on hover of .dot */
+#work-page .dot:hover .popup {
+    display: block;
+}
