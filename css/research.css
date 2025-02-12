@@ -60,6 +60,8 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     cursor: pointer;
     display: block; /* Ensure the card is a block element */
+    width: 20vw;
+    height: 20vw;
 }
 
 #research-page .card:hover {
@@ -69,8 +71,10 @@
 
 #research-page .card video {
     display: block;
-    width: 20vw;
-    height: 20vw;
+    width: 100%;;
+    height: auto;
     object-fit: cover;
     /* Keep the video visible */
+    max-width: 20vw;
+    max-height: 20vw;
 }
