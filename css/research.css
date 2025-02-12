@@ -69,8 +69,8 @@
 
 #research-page .card video {
     display: block;
-    width: 100%;
-    height: auto;
+    width: 20vw;
+    height: 20vw;
     object-fit: cover;
     /* Keep the video visible */
 }
