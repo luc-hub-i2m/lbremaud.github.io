@@ -6,8 +6,8 @@
 }
 
 #eoi-page .container video {
-    width: 30vw; /* Make the video fill the parent container */
-    height: auto; /* Maintain aspect ratio */
+    width: 30vw;
+    height: auto;
 }
 
 #eoi-page .container .title {
