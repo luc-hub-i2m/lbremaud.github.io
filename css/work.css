@@ -5,6 +5,7 @@
     margin: 0 auto;
     right: 20vw;
     height: 99vw;
+    z-index: 1;
 }
 
 #work-page .dot {

@@ -1,0 +1,54 @@
+#mesh_composite-page .img {
+    height: 80%; /* Adjust to desired size */
+    position:absolute;
+    top:60vw;
+    left: 44vw;
+}
+
+#mesh_composite-page .img img {
+    width: 30vw; /* Make the video fill the parent container */
+    height: auto; /* Maintain aspect ratio */
+}
+
+#mesh_composite-page .img .title {
+    margin-top: -16vw; /* Add some space between the video and the text */
+    margin-left:10vw;
+    font-style: italic; /* Italicize the text */
+    font-size: 1.em; /* Adjust font size if needed */
+    color: whitesmoke; /* Adjust text color if desired */
+}
+
+#mesh_composite-page .img .hover-line {
+    position: absolute;
+    top: 7vw; /* Center vertically relative to the video-gepi container */
+    right: -23vw; /* Align with the right edge of the video */
+    transform: translateY(-50%); /* Correct vertical alignment */
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.5s ease; /* Smooth fade-in effect */
+    height: 25vw;
+}
+
+#mesh_composite-page .img:hover .hover-line {
+    opacity: 1; /* Show on hover */
+}
+
+#mesh_composite-page .img .hover-line .line {
+    width: 2px; /* Thickness of the line */
+    height: 80%; /* Adjust the line height as needed */
+    background-color: whitesmoke; /* Line color */
+    display: block; /* Ensure it's rendered */
+}
+
+#mesh_composite-page .img .hover-line .hover-text {
+    font-size: 1em; /* Text size */
+    color: whitesmoke; /* Text color */
+    text-align: left; /* Align text to the left */
+    max-width: 22vw; /* Restrict maximum width of the text container */
+    word-wrap: break-word; /* Break long words if necessary */
+    overflow-wrap: break-word; /* Alternate for better support */
+    white-space: normal; /* Allow normal wrapping behavior */
+    line-height: 1.5; /* Add spacing between lines for readability */
+}

@@ -50,12 +50,20 @@
         </script>
 
         <!-- Composite mesh -->
-        <div id="composite-placeholder"></div>
+        <!-- <div id="mesh_composite-placeholder"></div>
         <script>
-            fetch("composite.html")
+            fetch("mesh_composite.html")
                 .then(response => response.text())
                 .then(data => {
-                    document.getElementById("composite-placeholder").innerHTML = data;
+                    document.getElementById("mesh_composite-placeholder").innerHTML = data;
+                });
+        </script> -->
+        <div id="impact_composite-placeholder"></div>
+        <script>
+            fetch("impact_composite.html")
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("impact_composite-placeholder").innerHTML = data;
                 });
         </script>
         
