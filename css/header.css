@@ -29,7 +29,7 @@
     font-weight: bold;
 }
 
-.home-logo {
+/* .home-logo {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -41,6 +41,28 @@
     font-size: 1.2rem;
     font-weight: bold;
     margin-right: 1vw;
+} */
+
+.home-logo-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.8rem; /* Slightly larger than the image */
+    height: 2.8rem;
+    border-radius: 50%; /* Make the wrapper circular */
+    background-color: #FF6F61; /* Contour color */
+    margin-right: 1vw;
+}
+
+.home-logo-image {
+    width: 2.5rem; /* Image size */
+    height: 2.5rem;
+    border-radius: 50%; /* Make the image circular */
+    object-fit: cover; /* Ensure the image is cropped correctly */
+}
+
+.home-link:hover .home-logo-wrapper {
+    background-color: #3F4C5C; /* Optional: change background color */
 }
 
 .home-link:hover .home-logo {
