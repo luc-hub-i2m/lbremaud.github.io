@@ -96,7 +96,7 @@
 
 /* Base style for video elements */
 #research-page .grid .card video {
-    width: 20vw; /* Default size for larger screens */
+    max-width: 20vw; /* Default size for larger screens */
     height: auto;
     display: block;
     margin: auto;
@@ -105,12 +105,12 @@
 }
 
 /* Responsive adjustments for smaller screens */
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
     #research-page .video-card-wrapper{
-        transform: scale(0.8); /* Scale down the video element */
-        transform-origin: center; /* Keep scaling centered */
+        transform: scale(0.8); 
+        transform-origin: center; 
     }
-}
+} */
 
 /* Style for the info button */
 #research-page .info-button {
