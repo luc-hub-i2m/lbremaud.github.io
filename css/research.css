@@ -84,10 +84,14 @@
     max-height: 20vw; */
 /* } */
 
-#research-page .grid .card video {
+/* #research-page .grid .card video {
     width: 100%;
     height: auto;
-    /* object-fit: cover; */
+} */
+
+#research-page .grid .card video {
+    width: 20vw; /* Adjust as needed */
+    height: 20vw; /* Ensure consistent aspect ratio */
 }
 
 /* Style for the info button */
