@@ -1,56 +1,69 @@
+/* ==========================
+   Container Styles
+========================== */
 #research-page .container {
     padding-left: 2vw;
     padding-right: 2vw;
-    background-color: #2C333C; /* Adjust to fit your website theme */
+    background-color: #2C333C; /* Theme background */
     width: 90vw;
-    margin: 0 auto;
+    margin: 0 auto; /* Center container */
 }
 
+/* ==========================
+   Grid Layout & Scrollbar
+========================== */
 #research-page .grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* Always 4 columns */
+    grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
     grid-gap: 1rem;
-    max-height: 25vw; /* Limit the height of the grid */
-    overflow-y: auto; /* Vertical scrollbar */
-    overflow-x: hidden; /* Prevent horizontal scroll */
+    max-height: 50vw; /* Limit grid height */
+    overflow-y: auto; /* Vertical scroll */
+    overflow-x: hidden; /* Hide horizontal scroll */
     padding: 1rem;
     background: #2C333C;
-    border: 1px solid #2C333C;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 0.1rem solid #2C333C;
+    box-shadow: 0 0.4rem 0.6rem rgba(0, 0, 0, 0.1);
 }
 
+/* Custom scrollbar styles */
 #research-page .grid::-webkit-scrollbar {
-    height: 0.6vw; /* Set the height of the horizontal scrollbar */
+    height: 0.6vw; /* Horizontal scrollbar height */
+    /* width: 2vw; */
 }
 
 #research-page .grid::-webkit-scrollbar-thumb {
-    background-color: #FF6F61; /* Scrollbar thumb color */
-    border-radius: 1vw; /* Rounded edges */
+    background-color: #FF6F61; /* Scrollbar thumb */
+    border-radius: 1vw;
 }
 
 #research-page .grid::-webkit-scrollbar-track {
-    background-color: #3A424C; /* Scrollbar track color */
-    border-radius: 1vw; /* Rounded corners for the track */
+    background-color: #3A424C; /* Scrollbar track */
+    border-radius: 1vw;
 }
 
-/* Wrapper for title and card to ensure they stay together */
+/* ==========================
+   Video Card Wrapper & Title
+========================== */
+/* Wrapper to keep title and card together */
 #research-page .video-card-wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-/* Style for the video title above the card */
+/* Title above video */
 #research-page .video-title {
     padding: 0rem 0.5rem;
     text-align: center;
     font-size: 1rem;
     font-family: 'Poppins', sans-serif;
     color: whitesmoke;
-    margin-bottom: 0rem; /* Space between title and card */
+    margin-bottom: 0rem; /* Tight spacing to card */
 }
 
-/* Style for the card */
+/* ==========================
+   Video Card Styles
+========================== */
 #research-page .card {
     position: relative;
     border: 1px solid #FF6F61;
@@ -59,60 +72,39 @@
     background: #2C333C;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     cursor: pointer;
-    display: block; /* Ensure the card is a block element */
-    /* max-width: 20vw;
-    max-height: 20vw; */
-    /* width: 20vw;
-    height: 20vw; */
-    width: 20vw;
-    height: 20vw;
+    display: block;
+    width: 100%;
+    max-width: 20vw;
+    height: auto;
+    aspect-ratio: 1 / 1;
 }
 
 #research-page .card:hover {
-    box-shadow: 0 1vw 2vw rgba(0, 0, 0, 0.3); /* Slightly larger shadow */
+    box-shadow: 0 1vw 2vw rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
     background-color: #3A424C;
 }
 
-/* #research-page .card video { */
-    /* display: block; */
-    /* width: 100%; */
-    /* height: auto; */
-    /* max-width: 100%; */
-    /* object-fit: cover; */
-    /* Keep the video visible */
-    /* max-width: 20vw;
-    max-height: 20vw; */
-/* } */
-
-/* #research-page .grid .card video {
-    width: 100%;
-    height: auto;
-} */
-
-/* #research-page .grid .card video {
-    width: 20vw;
-    height: 20vw;
-} */
-
-/* Base style for video elements */
+/* ==========================
+   Video Element Styles
+========================== */
 #research-page .grid .card video {
-    max-width: 20vw; /* Default size for larger screens */
+    max-width: 20vw;
+    width: 100%;
     height: auto;
     display: block;
     margin: auto;
-    border: 1px solid #999;
-    object-fit: cover; /* Ensures proper aspect ratio */
+    border: 0.1rem solid #999;
+    object-fit: cover;
+    aspect-ratio: 1 / 1;
 }
 
-/* Responsive adjustments for smaller screens */
-/* @media (max-width: 768px) {
-    #research-page .video-card-wrapper{
-        transform: scale(0.8); 
-        transform-origin: center; 
-    }
-} */
+#research-page .card video:hover {
+    filter: brightness(1.2);
+}
 
-/* Style for the info button */
+/* ==========================
+   Info Button Styles
+========================== */
 #research-page .info-button {
     position: absolute;
     top: 0.5rem;
@@ -123,10 +115,12 @@
     cursor: pointer;
 }
 
+/* Hide native checkbox */
 #research-page .info-button input[type="checkbox"] {
-    display: none; /* Hide the checkbox */
+    display: none;
 }
 
+/* Styled button circle */
 #research-page .info-button span {
     background-color: #20252A;
     color: whitesmoke;
@@ -138,42 +132,81 @@
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    border: 2px solid whitesmoke; /* Add a white border */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border: 0.2rem solid whitesmoke;
+    box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.1);
 }
 
+/* Hover effect for info button */
 #research-page .info-button span:hover {
     background-color: #F3A03B;
-    border: 2px solid #FF6F61;
+    border: 0.2rem solid #FF6F61;
 }
 
-/* Style for the info window */
+/* ==========================
+   Info Window Styles
+========================== */
 #research-page .info-window {
     display: none; /* Hidden by default */
     position: absolute;
-    top: 0rem; /* Adjust position */
+    top: 0rem; /* Positioned relative to card */
     left: 2rem;
     width: 16rem;
     padding: 0.5rem;
     background-color: #3A424C;
     color: whitesmoke;
     font-size: 0.9rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 0.8rem;
+    box-shadow: 0 0.4rem 0.6rem rgba(0, 0, 0, 0.1);
     z-index: 10;
-    border: 2px solid #F3A03B;
+    border: 0.2rem solid #F3A03B;
     text-align: left;
 }
 
-/* Show the info window when checkbox is checked */
+/* Show info window when checkbox is checked */
 #research-page .info-button input[type="checkbox"]:checked ~ .info-window {
     display: block;
 }
 
+/* Change info button style when active */
 #research-page .info-button input[type="checkbox"]:checked ~ span {
     background-color: #F3A03B;
-    border: 2px solid #FF6F61;
+    border: 0.2rem solid #FF6F61;
 }
 
+/* ==========================
+   Responsive Styles
+========================== */
+@media (max-width: 768px) {
+    /* Reduce columns on medium/small screens */
+    #research-page .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 
+    /* Larger cards */
+    #research-page .card {
+        max-width: 40vw;
+        aspect-ratio: 1 / 1;
+    }
 
+    /* Larger videos inside cards */
+    #research-page .grid .card video {
+        max-width: 50vw;
+    }
+
+    /* Increase title font size */
+    #research-page .video-title {
+        font-size: 2rem;
+    }
+
+    /* Bigger info button */
+    #research-page .info-button span {
+        width: 3rem;
+        height: 3rem;
+    }
+
+    /* Wider info window */
+    #research-page .info-window {
+        left: 4rem;
+        width: 30vw;
+    }
+}
