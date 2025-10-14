@@ -76,7 +76,7 @@
     border: 0.2vw solid #FF6F61;
     width: 20vw;
     max-width: 25vw;
-    right: 450%;
+    right: 475%;
     width: max-content;
 }
 
@@ -101,4 +101,9 @@
 /* Show the square pop-up on hover of .dot */
 #education-page .dot:hover .popup {
     display: block;
+}
+
+/* Text location & date */
+#education-page .text-color {
+    color: pink; /* Example styling */
 }

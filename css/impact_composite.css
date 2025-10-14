@@ -1,8 +1,8 @@
 #impact_composite-page .container {
     height: 80%; /* Adjust to desired size */
     position:absolute;
-    top:60vw;
-    left: 44vw;
+    top:55vw;
+    left: 42vw;
     z-index: 0;
 }
 
